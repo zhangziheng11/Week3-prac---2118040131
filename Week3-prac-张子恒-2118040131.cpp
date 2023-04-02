@@ -49,9 +49,7 @@ int main() {
         return 0;
     }
 
-    std::cout << "You ordered a " << piePtr->description() << std::endl;
+    // Create a ApricotPie object
+     ApricotPie apricotPie;
 
-    delete piePtr; // deallocate memory
 
-    return 0;
-}
