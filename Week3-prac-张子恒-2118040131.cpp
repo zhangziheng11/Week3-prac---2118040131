@@ -27,28 +27,31 @@ public:
     }
 };
 
-// Derived class ApricotPie
-class ApricotPie : public Pie {
-public:
-    std::string description() override {
-        return "ApricotPie Pie";
-}
-};
-
 int main() {
-    // Create an ApplePie object
-    ApplePie applePie;
+    Pie* piePtr = nullptr; // pointer to Pie
 
-    // Print out the description of the ApplePie
-    std::cout << applePie.description() << std::endl;
+    std::cout << "What type of pie would you like?" << std::endl;
+    std::cout << "1 represents Apple Pie" << std::endl;
+    std::cout << "2 represents Raspberry Pie" << std::endl;
+    std::cout << "Please type your choice 1 or 2 ?" << std::endl;
+    int choice;
+    std::cin >> choice;
 
-    // Create a RaspberryPie object
-    RaspberryPie raspberryPie;
+    switch (choice) {
+    case 1:
+        piePtr = new ApplePie();
+        break;
+    case 2:
+        piePtr = new RaspberryPie();
+        break;
+    default:
+        std::cout << "Invalid choice, exiting." << std::endl;
+        return 0;
+    }
 
-    // Print out the description of the RaspberryPie
-    std::cout << raspberryPie.description() << std::endl;
+    std::cout << "You ordered a " << piePtr->description() << std::endl;
 
-    // Create a ApricotPie object
-     ApricotPie apricotPie;
+    delete piePtr; // deallocate memory
 
-
+    return 0;
+}
