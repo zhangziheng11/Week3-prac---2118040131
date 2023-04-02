@@ -1,5 +1,6 @@
 ﻿// Week3-prac-张子恒-2118040131.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
+
 #include <iostream>
 #include <string>
 
@@ -31,7 +32,7 @@ class ApricotPie : public Pie {
 public:
     std::string description() override {
         return "ApricotPie Pie";
-    }
+}
 };
 
 int main() {
@@ -50,8 +51,4 @@ int main() {
     // Create a ApricotPie object
      ApricotPie apricotPie;
 
-    // Print out the description of the RaspberryPie
-    std::cout << apricotPie.description() << std::endl;
 
-    return 0;
-}
