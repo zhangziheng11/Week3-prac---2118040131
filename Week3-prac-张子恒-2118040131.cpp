@@ -49,6 +49,9 @@ int main() {
     std::cout << raspberryPie.description() << std::endl;
 
     // Create a ApricotPie object
-     ApricotPie apricotPie;
+    ApricotPie apricotPie;
+    // Print out the description of the RaspberryPie
+    std::cout << apricotPie.description() << std::endl;
 
-
+    return 0;
+}
