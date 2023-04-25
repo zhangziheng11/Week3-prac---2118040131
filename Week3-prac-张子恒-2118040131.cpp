@@ -1,7 +1,4 @@
-﻿// Week3-prac-张子恒-2118040131.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
 // Base class Pie
@@ -31,9 +28,9 @@ int main() {
     Pie* piePtr = nullptr; // pointer to Pie
 
     std::cout << "What type of pie would you like?" << std::endl;
-    std::cout << "1 represents Apple Pie" << std::endl;
-    std::cout << "2 represents Raspberry Pie" << std::endl;
-    std::cout << "Please type your choice 1 or 2 ?" << std::endl;
+    std::cout << "1. Apple Pie" << std::endl;
+    std::cout << "2. Raspberry Pie" << std::endl;
+
     int choice;
     std::cin >> choice;
 
@@ -49,7 +46,9 @@ int main() {
         return 0;
     }
 
-    // Create a ApricotPie object
-     ApricotPie apricotPie;
+    std::cout << "You ordered a " << piePtr->description() << std::endl;
 
+    delete piePtr; // deallocate memory
 
+    return 0;
+}
